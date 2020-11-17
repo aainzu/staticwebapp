@@ -1,8 +1,5 @@
 import { ITemperatura } from "../Models/ITemperatura";
 import { ITemperaturaServices } from "../Services/ITemperaturaServices";
-import { config, tablaTemp } from "../_Common/config";
-
-const mysqlx = require('@mysql/xdevapi');
 
 export class MySQLTemperaturaService implements ITemperaturaServices {
     /**
@@ -14,7 +11,7 @@ export class MySQLTemperaturaService implements ITemperaturaServices {
     constructor() {
 
     }
-
+    
     public getAll = (): Promise<ITemperatura[]> => new Promise(async (resolve, reject) => {
         try {
             let response = await fetch("/api/function_prueba");
