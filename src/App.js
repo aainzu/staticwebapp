@@ -4,11 +4,11 @@ import { MySQLTemperaturaService } from "./_Logic/Data/MySQLTemperaturaService"
 import {BaseDatosMaterial} from "./_Presentation/Components/BaseDatosMaterial"
 
 function App() {
-  const [items, setItems] = useState([]);
+  const [items,setItems] = useState([]);
   useEffect(() => {
     var prueba = new MySQLTemperaturaService();
     prueba.getAll()
-    .then(res => console.log(res))
+    .then(res => {console.log(res); setItems([])})
     .catch(err => console.log(err))
 
   },[]);
