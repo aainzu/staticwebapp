@@ -1,3 +1,4 @@
+import {config,tablaTemp} from "./config"
 const mysqlx = require('@mysql/xdevapi');
 var version = process.version;
 
