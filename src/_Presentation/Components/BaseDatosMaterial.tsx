@@ -7,7 +7,6 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import { useState } from 'react';
 import { ITemperatura } from "../../_Logic/Models/ITemperatura"
 
 import * as names from "../../_Logic/_Common/dataNames"
@@ -38,12 +37,6 @@ const StyledTableRow = withStyles((theme: Theme) =>
     },
   }),
 )(TableRow);
-
-function createData(name: string, calories: number, fat: number, carbs: number, protein: number) {
-  return { name, calories, fat, carbs, protein };
-}
-
-
 
 const useStyles = makeStyles({
   table: {
