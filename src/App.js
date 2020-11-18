@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     var prueba = new MySQLTemperaturaService();
     prueba.getAll()
-    .then(res => {console.log(res); setItems([])})
+    .then(res => {console.log(res); setItems(res)})
     .catch(err => console.log(err))
 
   },[]);
