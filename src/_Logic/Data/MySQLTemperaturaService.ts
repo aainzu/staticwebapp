@@ -10,8 +10,11 @@ export class MySQLTemperaturaService implements ITemperaturaServices {
 
     public getAll = (): Promise<ITemperatura[]> => new Promise(async (resolve, reject) => {
         try {
-            let response = await fetch("/api/function_prueba");
-            console.log(response);
+            fetch("/api/function_prueba").then(
+                res => res.text()
+            ).then(
+                data => console.log(data)
+            )
             resolve();
         } catch (error) {
             reject(error);
