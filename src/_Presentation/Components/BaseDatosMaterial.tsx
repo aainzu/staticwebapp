@@ -39,17 +39,18 @@ const StyledTableRow = withStyles((theme: Theme) =>
 )(TableRow);
 
 const useStyles = makeStyles({
-  table: {
-    minWidth: 700,
-  },
+
+  contTable:{
+    maxWidth: "50%",
+    maxHeight: "500px"
+  }
 });
 
 export function BaseDatosMaterial(props:IBaseDatosMaterialProps) {
   const classes = useStyles();
-  console.log(props);
   return (
-    <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="customized table">
+    <TableContainer className={classes.contTable} component={Paper}>
+      <Table aria-label="customized table">
         <TableHead>
           <TableRow>
             <StyledTableCell>{names.idName}</StyledTableCell>
