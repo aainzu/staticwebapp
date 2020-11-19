@@ -14,6 +14,7 @@ export class MySQLTemperaturaService implements ITemperaturaServices {
                 res => res.text()
             ).then(
                 data => {
+                    console.log(data);
                     let aux = JSON.parse(data);
                     resolve(aux as ITemperatura[]);
                 }

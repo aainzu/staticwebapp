@@ -40,6 +40,9 @@ const StyledTableRow = withStyles((theme: Theme) =>
 
 const useStyles = makeStyles({
 
+  table:{
+    height: "50%",
+  },
   contTable:{
     maxWidth: "50%",
     maxHeight: "500px"
